@@ -4,10 +4,10 @@
   "description": "Theme Description.",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "watch:sass": "node-sass assets/sass/main.scss style.css -w",
     "dev-server": "live-server",
     "start": "npm-run-all --parallel watch:sass dev-server",
-    "compile:sass": "node-sass sass/main.scss style.comp.css",
+    "compile:sass": "node-sass assets/sass/main.scss style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 version\" css/style.comp.css -o style.prefix.css",
     "compress:css": "node-sass style.prefix.css style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix.css compress:css"
